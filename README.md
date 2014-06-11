@@ -1,3 +1,13 @@
+## Drupal 8.x on OpenShift
+
+### Starting up an application
+
+```
+rhc app create drupal8 php-5.4 mysql-5.5 cron \
+  https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-community-drush-master \
+  --from-code=git://github.com/phase2/drupal8-quickstart.git
+```
+
 ### Updating git
 
 This repo was made with the following commands.
