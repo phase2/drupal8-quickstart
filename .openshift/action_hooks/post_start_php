@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Create this directory and symlink it into place if needed.
+FILES_DIR="${OPENSHIFT_DATA_DIR}/files"
+DRUPAL_FILES_DIR="${OPENSHIFT_REPO_DIR}sites/default/files"
+mkdir -p $FILES_DIR
+
+rm -fr $DRUPAL_FILES_DIR
+ln -sfv $FILES_DIR $DRUPAL_FILES_DIR

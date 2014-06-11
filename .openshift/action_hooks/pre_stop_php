@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Try making the sites dir writeable for git's benefit.
+for site in `find ${OPENSHIFT_REPO_DIR}php/sites -maxdepth 1 -mindepth 1 -type d -not -iname all`; do
+  chmod -R ugo+w $site || :
+done
+
