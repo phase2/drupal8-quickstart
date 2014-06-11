@@ -8,6 +8,10 @@ rhc app create drupal8 php-5.4 mysql-5.5 cron \
   --from-code=git://github.com/phase2/drupal8-quickstart.git
 ```
 
+Once this has been done, navigate to /core/install.php and install Drupal. The
+database information will be pre-filled for you based on OpenShift's
+environmental variables.
+
 ### Updating git
 
 This repo was made with the following commands.

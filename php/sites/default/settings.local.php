@@ -28,6 +28,17 @@ if (isset($_ENV['OPENSHIFT_APP_NAME']) || isset($_SERVER['OPENSHIFT_APP_NAME']))
       ),
     ),
   );
+
+  // Configure the config directories in the ephemeral data directory.
+  $config_directories = array(
+    CONFIG_ACTIVE_DIRECTORY => $src['OPENSHIFT_DATA_DIR'] . 'active-config',
+    CONFIG_STAGING_DIRECTORY => $src['OPENSHIFT_DATA_DIR'] . 'staging-config',
+  );
+
+  // Also set up a hash salt if none has been set.
+  if (!isset($settings['hash_salt']) || $settings['hash_salt'] === '') {
+    $settings['hash_salt'] = md5(strval($databases));
+  }
 }
 else {
   // Put your own local database information here.
