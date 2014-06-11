@@ -4,6 +4,6 @@ This repo was made with the following commands.
 
 ```
 git remote add -f drupal http://git.drupal.org/project/drupal.git
-git subtree add --prefix . drupal 8.x --squash
+git subtree add --prefix php drupal 8.x --squash
 ```
 

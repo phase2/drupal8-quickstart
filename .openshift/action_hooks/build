@@ -12,6 +12,6 @@ cat >"${OPENSHIFT_HOMEDIR}/.drush/drushrc.php" <<EOF
 <?php
   ini_set('memory_limit', -1);
   \$options['uri'] = \$_ENV['OPENSHIFT_APP_DNS'];
-  \$options['root'] = \$_ENV['OPENSHIFT_REPO_DIR'];
+  \$options['root'] = \$_ENV['OPENSHIFT_REPO_DIR'].'php';
 EOF
 
